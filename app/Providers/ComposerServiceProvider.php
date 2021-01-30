@@ -22,10 +22,11 @@ class ComposerServiceProvider extends ServiceProvider
         {   
             $user = Auth::user();
             if(!is_null($user)){
-                $this->user_name=Auth::user()->user;
-                $this->rol=Auth::user()->rol->nombre;
+                $this->user_name=Auth::user()->nombre;
+                $this->rol=Auth::user()->idrol;
+                //dd($this->rol);
                 $this->image=Auth::user()->photo;
-                $this->rol_id=Auth::user()->rol_id;
+                $this->rol_id=Auth::user()->idrol;
 
                 $view->with(array(
                 'user_name' =>$this->user_name,

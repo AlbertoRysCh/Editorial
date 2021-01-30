@@ -27,7 +27,7 @@
                         @endif-->
                     </ul>
                     <ul class="menu-content">
-                        <li class=""><a href="{{route('prospecto.index')}}"><i class="fa fa-user-o"></i><span class="menu-item" data-i18n="prospecto">Prospecto/Clientes</span></a>
+                        <li class=""><a href=""><i class="fa fa-user-o"></i><span class="menu-item" data-i18n="prospecto">Prospecto/Clientes</span></a>
                         </li>
                     </ul>
                     

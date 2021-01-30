@@ -51,7 +51,7 @@ class UserController extends Controller
     {
         $columns = array(
             0 => 'users.id',
-            1 => 'users.name',
+            1 => 'users.nombre',
             2 => 'users.username'
         );
         $obj        = [];
@@ -82,7 +82,7 @@ class UserController extends Controller
                 }
                 $obj    = $obj->where(function ($query) use ($search,$search_number) {
                     $query->where('users.estado', 'LIKE', '%' . $search_number . '%');
-                    $query->orWhere('users.name', 'like', "%{$search}%");
+                    $query->orWhere('users.nombre', 'like', "%{$search}%");
                     $query->orWhere('users.email','like', "%{$search}%");
                     $query->orWhere('users.username','like', "%{$search}%");
                     $query->orWhere('users.num_documento', 'like', "%{$search}%");
@@ -91,7 +91,7 @@ class UserController extends Controller
                 });
             }else{
                 $obj    = $obj->where(function ($query) use ($search) {
-                    $query->orWhere('users.name', 'like', "%{$search}%");
+                    $query->orWhere('users.nombre', 'like', "%{$search}%");
                     $query->orWhere('users.email','like', "%{$search}%");
                     $query->orWhere('users.username','like', "%{$search}%");
                     $query->orWhere('users.num_documento', 'like', "%{$search}%");

@@ -20,6 +20,7 @@ class CreateRolesTable extends Migration
             $table->boolean('condicion')->default(1);
         });
 
+        //ROLES
         DB::table('roles')->insert(array('id'=>'1','nombre'=>'Administrador','descripcion'=>'Administrador'));
         DB::table('roles')->insert(array('id'=>'2','nombre'=>'Community manager','descripcion'=>'Community manager'));
         DB::table('roles')->insert(array('id'=>'3','nombre'=>'Jefe de ventas','descripcion'=>'Jefe de ventas'));

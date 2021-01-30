@@ -92,7 +92,7 @@ Route::group(['middleware' => ['auth']], function () {
     });
 
     //PROSPECTOS
-    Route::resource('prospecto', 'ProspectoController');
+    Route::resource('Clientes', 'ClienteController');
     //REGISTRO LLAMADA
     Route::resource('RegistrarLlamada', 'RegistrollamadaController');
 });
